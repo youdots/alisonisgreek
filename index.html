@@ -1,393 +1,734 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Operation Odyssey: Ibiza Costume Strategy</title>
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Chart.js -->
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap" rel="stylesheet">
-    
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        'aegean-900': '#0C4A6E', // Deep Blue
-                        'aegean-700': '#0369A1',
-                        'aegean-500': '#0EA5E9', // Vibrant Blue
-                        'gold-500': '#EAB308',   // Gold Accent
-                        'gold-100': '#FEF9C3',
-                        'stone-50': '#FAFAF9',
-                    },
-                    fontFamily: {
-                        sans: ['Roboto', 'sans-serif'],
-                    }
-                }
-            }
-        }
-    </script>
-
-    <!-- 
-        PALETTE: Electric Aegean & Gold
-        Primary: #0EA5E9 (Vibrant Blue)
-        Secondary: #EAB308 (Gold)
-        Background: #FAFAF9 (Stone White)
-        Text: #0C4A6E (Deep Navy)
-        
-        Selected based on the "Vibrant/Energetic" requirement and the Greek Theme.
-    -->
-
-    <!-- 
-        NARRATIVE PLAN:
-        1. Intro: Setting the scene (Ibiza context, 42yo male target).
-        2. The Archetypes: 4 Distinct personas with "Buy/Make" instructions.
-        3. Strategic Analysis (Charts): Comparing effort, impact, and comfort.
-        4. Sourcing Logistics: Where to buy in Ibiza vs Online.
-        5. Timeline: 7-Day execution plan.
-    -->
-
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Operation AlisonIsGreek</title>
+    <meta
+      name="description"
+      content="Greek costume strategy for Ibiza: DIY builds, over-the-top upgrades, and fast local or 24-48h sourcing. Operation AlisonIsGreek."
+    />
+    <link rel="canonical" href="https://alisonisgreek.youdots.com/" />
+    <meta property="og:title" content="Operation AlisonIsGreek" />
+    <meta
+      property="og:description"
+      content="A PDF-first Greek costume playbook for Ibiza: builds, sourcing, and delivery tactics."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://alisonisgreek.youdots.com/" />
+    <meta property="og:image" content="https://alisonisgreek.youdots.com/assets/og-image.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Operation AlisonIsGreek" />
+    <meta
+      name="twitter:description"
+      content="DIY and over-the-top Greek costume builds with Ibiza-first sourcing."
+    />
+    <meta name="twitter:image" content="https://alisonisgreek.youdots.com/assets/og-image.png" />
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Source+Sans+3:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
     <style>
-        .chart-container {
-            position: relative;
-            width: 100%;
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
-            height: 350px;
-            max-height: 400px;
-        }
-        @media (max-width: 640px) {
-            .chart-container {
-                height: 300px;
-            }
-        }
-        .card-hover:hover {
-            transform: translateY(-5px);
-            transition: transform 0.3s ease;
-        }
-    </style>
-</head>
-<body class="bg-stone-50 text-aegean-900 font-sans leading-relaxed">
+      :root {
+        --stone: #f6f2ea;
+        --navy: #0b1f2e;
+        --teal: #00a7b7;
+        --sun: #f4b43c;
+        --coral: #ff6b4a;
+        --slate: #2e3a44;
+        --mist: #c9d2d6;
+        --card: #ffffff;
+        --shadow: 0 20px 40px rgba(11, 31, 46, 0.12);
+      }
 
-    <!-- Header / Hook -->
-    <header class="bg-aegean-900 text-white py-12 px-4 shadow-lg">
-        <div class="max-w-6xl mx-auto text-center">
-            <h1 class="text-4xl md:text-6xl font-black mb-4 tracking-tight uppercase text-gold-500">Operation: Odyssey</h1>
-            <p class="text-xl md:text-2xl font-light text-aegean-200">The 42-Year-Old's Strategic Guide to Greek Mythology in Ibiza</p>
-            <p class="mt-4 text-sm md:text-base opacity-80 max-w-2xl mx-auto">
-                Target: Greek Costume Party. Timeline: &lt; 7 Days. Location: Ibiza.
-                <br>Mission: High Impact, Low Stress, Maximum Breathability.
-            </p>
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: "Source Sans 3", system-ui, -apple-system, sans-serif;
+        color: var(--navy);
+        background: radial-gradient(circle at 10% 10%, #fff7e2 0%, var(--stone) 50%),
+          linear-gradient(135deg, #f9f3e9 0%, #eef6f6 100%);
+        min-height: 100vh;
+      }
+
+      body::before {
+        content: "";
+        position: fixed;
+        inset: 0;
+        background-image: radial-gradient(rgba(11, 31, 46, 0.04) 1px, transparent 1px);
+        background-size: 26px 26px;
+        pointer-events: none;
+        z-index: -1;
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 24px;
+      }
+
+      header {
+        padding: 72px 0 48px;
+      }
+
+      .hero {
+        display: grid;
+        gap: 32px;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        align-items: center;
+      }
+
+      .badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 8px 14px;
+        border-radius: 999px;
+        font-size: 12px;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        background: rgba(0, 167, 183, 0.15);
+        color: var(--teal);
+        font-weight: 700;
+      }
+
+      h1,
+      h2,
+      h3 {
+        font-family: "Cinzel", serif;
+        margin: 0 0 12px;
+      }
+
+      h1 {
+        font-size: clamp(2.5rem, 4vw, 4rem);
+        letter-spacing: 0.04em;
+      }
+
+      .hero p {
+        font-size: 1.1rem;
+        line-height: 1.7;
+        color: var(--slate);
+        margin: 0 0 18px;
+      }
+
+      .cta-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        gap: 14px;
+      }
+
+      .cta {
+        padding: 16px 18px;
+        border-radius: 16px;
+        background: var(--card);
+        border: 1px solid rgba(11, 31, 46, 0.08);
+        box-shadow: var(--shadow);
+      }
+
+      .cta strong {
+        display: block;
+        font-size: 1.05rem;
+        margin-bottom: 6px;
+      }
+
+      .cta span {
+        font-size: 0.9rem;
+        color: var(--slate);
+      }
+
+      .section {
+        margin: 40px 0;
+      }
+
+      .section-title {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        margin-bottom: 20px;
+      }
+
+      .section-title .line {
+        flex: 1;
+        height: 1px;
+        background: linear-gradient(90deg, var(--teal), transparent);
+      }
+
+      .grid {
+        display: grid;
+        gap: 20px;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      }
+
+      .card {
+        background: var(--card);
+        border-radius: 20px;
+        padding: 22px;
+        box-shadow: var(--shadow);
+        border: 1px solid rgba(11, 31, 46, 0.08);
+        position: relative;
+        overflow: hidden;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .card:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 30px 50px rgba(11, 31, 46, 0.16);
+      }
+
+      .card h3 {
+        font-size: 1.3rem;
+        margin-bottom: 8px;
+      }
+
+      .pill {
+        display: inline-flex;
+        gap: 8px;
+        align-items: center;
+        padding: 6px 12px;
+        border-radius: 999px;
+        font-size: 0.8rem;
+        background: rgba(244, 180, 60, 0.18);
+        color: var(--navy);
+        font-weight: 600;
+      }
+
+      .list {
+        list-style: none;
+        padding: 0;
+        margin: 14px 0 0;
+      }
+
+      .list li {
+        padding: 6px 0;
+        border-bottom: 1px dashed rgba(11, 31, 46, 0.12);
+        font-size: 0.95rem;
+        color: var(--slate);
+      }
+
+      .list li:last-child {
+        border-bottom: none;
+      }
+
+      .tag {
+        display: inline-block;
+        margin-top: 12px;
+        padding: 6px 10px;
+        border-radius: 10px;
+        background: rgba(0, 167, 183, 0.12);
+        color: var(--teal);
+        font-weight: 700;
+        font-size: 0.75rem;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+      }
+
+      .split {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 18px;
+      }
+
+      .panel {
+        padding: 20px;
+        border-radius: 18px;
+        background: rgba(255, 255, 255, 0.9);
+        border: 1px solid rgba(11, 31, 46, 0.1);
+      }
+
+      .panel h4 {
+        margin: 0 0 10px;
+        font-size: 1.05rem;
+      }
+
+      .panel p {
+        margin: 0 0 8px;
+        color: var(--slate);
+      }
+
+      .timeline {
+        display: grid;
+        gap: 16px;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      }
+
+      .timeline .step {
+        background: var(--navy);
+        color: #fff;
+        padding: 18px;
+        border-radius: 16px;
+        position: relative;
+      }
+
+      .step strong {
+        display: block;
+        font-size: 1.1rem;
+        color: var(--sun);
+        margin-bottom: 6px;
+      }
+
+      .step span {
+        display: block;
+        color: rgba(255, 255, 255, 0.86);
+        font-size: 0.95rem;
+      }
+
+      .source-list {
+        display: grid;
+        gap: 10px;
+      }
+
+      .source-list a {
+        color: var(--teal);
+        text-decoration: none;
+        font-size: 0.9rem;
+      }
+
+      .checklist {
+        display: grid;
+        gap: 14px;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      }
+
+      .checklist-item {
+        display: flex;
+        gap: 12px;
+        align-items: flex-start;
+        padding: 14px 16px;
+        border-radius: 16px;
+        background: rgba(255, 255, 255, 0.9);
+        border: 1px solid rgba(11, 31, 46, 0.08);
+      }
+
+      .check {
+        width: 22px;
+        height: 22px;
+        border-radius: 6px;
+        border: 2px solid var(--teal);
+        display: grid;
+        place-items: center;
+        color: var(--teal);
+        font-weight: 700;
+      }
+
+      .checklist-item p {
+        margin: 6px 0 0;
+        color: var(--slate);
+      }
+
+      .gallery {
+        display: grid;
+        gap: 18px;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      }
+
+      .gallery-card {
+        border-radius: 18px;
+        overflow: hidden;
+        background: var(--card);
+        border: 1px solid rgba(11, 31, 46, 0.08);
+        box-shadow: var(--shadow);
+      }
+
+      .gallery-swatch {
+        height: 150px;
+        background: linear-gradient(130deg, rgba(0, 167, 183, 0.8), rgba(244, 180, 60, 0.8));
+      }
+
+      .gallery-body {
+        padding: 16px;
+      }
+
+      .gallery-body p {
+        margin: 6px 0 0;
+        color: var(--slate);
+      }
+
+      .pdf-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        padding: 12px 16px;
+        border-radius: 999px;
+        background: var(--navy);
+        color: #fff;
+        text-decoration: none;
+        font-weight: 600;
+      }
+
+      .footer {
+        margin: 40px 0 60px;
+        text-align: center;
+        color: var(--slate);
+        font-size: 0.85rem;
+      }
+
+      @media (max-width: 720px) {
+        header {
+          padding-top: 48px;
+        }
+
+        .hero {
+          text-align: left;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="container">
+      <div class="hero">
+        <div>
+          <span class="badge">Operation AlisonIsGreek</span>
+          <h1>Operation AlisonIsGreek</h1>
+          <p>
+            A fast, breathable, high-impact Greek costume strategy for Ibiza. This is a synthesis of
+            archetype strategy and real sourcing logistics, with emphasis on the PDF playbook.
+          </p>
+          <p>
+            Target: 42-year-old male. Timeline: end of next week. Goal: assemble a full look that survives
+            heat, travel, and dancing.
+          </p>
         </div>
+        <div class="cta-grid">
+          <div class="cta">
+            <strong>DIY in a day</strong>
+            <span>Sheets, rope, laurel, and a strong silhouette.</span>
+          </div>
+          <div class="cta">
+            <strong>Order in 24-48h</strong>
+            <span>Disfrazzes, Funidelia, Comarfi, Disfraces Antifaz.</span>
+          </div>
+          <div class="cta">
+            <strong>Over-the-top mode</strong>
+            <span>Armor, capes, LED laurel, and a bold prop.</span>
+          </div>
+        </div>
+      </div>
+      <div>
+        <a class="pdf-link" href="/operation-alisonisgreek.pdf" download>
+          Download Print Pack (PDF)
+        </a>
+      </div>
     </header>
 
-    <main class="max-w-6xl mx-auto px-4 py-8 grid grid-cols-1 gap-12">
-
-        <!-- Section 1: Introduction -->
-        <section class="bg-white rounded-xl shadow-md p-6 md:p-8 border-l-8 border-gold-500">
-            <h2 class="text-2xl font-bold mb-4 text-aegean-700">Mission Briefing</h2>
-            <p class="text-lg text-gray-700 mb-4">
-                Creating a Greek costume on the White Isle requires balancing historical aesthetics with the reality of Balearic heat.
-                We have identified four viable "Archetypes" suited for a 42-year-old male that range from "Royal & Relaxed" to "Theatrical Warrior."
-                The data below analyzes the trade-offs between "Wow Factor" and "Effort Required" to help you choose your path.
-            </p>
-        </section>
-
-        <!-- Section 2: Comparative Analysis (Bar Chart) -->
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div class="bg-white rounded-xl shadow-md p-6 flex flex-col justify-center">
-                <h3 class="text-xl font-bold mb-2 text-aegean-700">Effort vs. Impact Matrix</h3>
-                <p class="text-sm text-gray-600 mb-6">
-                    A comparative analysis of costume archetypes. "Dionysus" offers the highest return on investment (Low Effort, High Fun), while "Ares" commands the room but requires sourcing leather.
-                </p>
-                <div class="chart-container">
-                    <canvas id="impactChart"></canvas>
-                </div>
-            </div>
-
-            <!-- Archetype 1: Dionysus -->
-            <div class="bg-gold-100 rounded-xl shadow-md p-6 border border-gold-500 card-hover">
-                <div class="flex items-center justify-between mb-4">
-                    <h3 class="text-2xl font-bold text-aegean-900">1. Dionysus (The Party God)</h3>
-                    <span class="text-4xl">🍇</span>
-                </div>
-                <p class="mb-4 font-bold text-aegean-700">The "I'm here to enjoy myself" option.</p>
-                <p class="text-sm mb-4">God of wine, festivity, and madness. Perfect for Ibiza nightlife.</p>
-                <div class="bg-white p-4 rounded-lg shadow-inner">
-                    <h4 class="font-bold text-sm uppercase tracking-wide text-gray-500 mb-2">Sourcing List (Ibiza):</h4>
-                    <ul class="list-disc list-inside space-y-1 text-sm">
-                        <li><strong>Base:</strong> White linen shirt (open) or bedsheet toga.</li>
-                        <li><strong>Head:</strong> Ivy/Vine garland (Florist or 'Chinese Bazaar' store).</li>
-                        <li><strong>Prop:</strong> Gold Wine Goblet (Home decor shop) & Bunch of plastic grapes.</li>
-                        <li><strong>Vibe:</strong> Leopard print scarf/fabric over shoulder.</li>
-                    </ul>
-                </div>
-            </div>
+    <main class="container">
+      <section class="section">
+        <div class="section-title">
+          <h2>Core Builds (PDF-first)</h2>
+          <span class="line"></span>
         </div>
+        <div class="grid">
+          <article class="card">
+            <span class="pill">Classic Toga / Philosopher</span>
+            <h3>Classic Toga or Socrates</h3>
+            <p>Minimal materials, maximum comfort. Works with a quick scroll prop and beard.</p>
+            <ul class="list">
+              <li>DIY: white bed sheet or large fabric, folded and belted.</li>
+              <li>Laurel: cardboard wreath or store-bought headband.</li>
+              <li>Footwear: sandals or simple leather shoes.</li>
+              <li>Props: scroll (rolled paper aged with tea), fake beard.</li>
+            </ul>
+            <span class="tag">Local + Online</span>
+            <ul class="list">
+              <li>Ibiza local: EIVITOYS, Tur Toy.</li>
+              <li>Online: Funidelia (48h to Balearics), Disfrazzes (24/48h over EUR 60).</li>
+            </ul>
+          </article>
 
-        <!-- Section 3: The Archetypes Continued -->
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-            
-            <!-- Archetype 2: Poseidon -->
-            <div class="bg-white rounded-xl shadow-md p-6 border-t-4 border-aegean-500 card-hover">
-                <div class="flex items-center justify-between mb-4">
-                    <h3 class="text-xl font-bold text-aegean-900">2. Poseidon (Sea King)</h3>
-                    <span class="text-3xl">🔱</span>
-                </div>
-                <p class="text-sm text-gray-600 mb-4">
-                    Uses items easily found in beach shops.
-                </p>
-                <ul class="text-sm space-y-2">
-                    <li class="flex items-start"><span class="mr-2 text-aegean-500">➜</span> <strong>Weapon:</strong> Plastic Trident (Toy stores/Beach shops).</li>
-                    <li class="flex items-start"><span class="mr-2 text-aegean-500">➜</span> <strong>Wear:</strong> Turquoise/Blue linens. A fishing net (decor shop) draped as a cape.</li>
-                    <li class="flex items-start"><span class="mr-2 text-aegean-500">➜</span> <strong>Detail:</strong> Glue shells to a headband.</li>
-                </ul>
-            </div>
+          <article class="card">
+            <span class="pill">Zeus or Poseidon</span>
+            <h3>Zeus / Poseidon</h3>
+            <p>Classic deity energy: gold trim, laurel, and a signature prop.</p>
+            <ul class="list">
+              <li>Zeus: white toga, rope belt, lightning bolt prop.</li>
+              <li>Poseidon: teal tunic, trident, sea shells or net cape.</li>
+              <li>Upgrade: gold cuffs, bronze spray paint for props.</li>
+            </ul>
+            <span class="tag">Fast Delivery</span>
+            <ul class="list">
+              <li>Disfrazzes: Hades/Poseidon costumes, 24-48h shipping.</li>
+              <li>Funidelia: Greek god costume, 48h shipping.</li>
+            </ul>
+          </article>
 
-            <!-- Archetype 3: Ares -->
-            <div class="bg-white rounded-xl shadow-md p-6 border-t-4 border-red-600 card-hover">
-                <div class="flex items-center justify-between mb-4">
-                    <h3 class="text-xl font-bold text-aegean-900">3. Ares (The Spartan)</h3>
-                    <span class="text-3xl">⚔️</span>
-                </div>
-                <p class="text-sm text-gray-600 mb-4">
-                    High masculinity, requires leather accessories.
-                </p>
-                <ul class="text-sm space-y-2">
-                    <li class="flex items-start"><span class="mr-2 text-red-600">➜</span> <strong>Base:</strong> Brown leather sandals & shorts.</li>
-                    <li class="flex items-start"><span class="mr-2 text-red-600">➜</span> <strong>Key Item:</strong> Red fabric (sold by the meter) safety-pinned as a cape.</li>
-                    <li class="flex items-start"><span class="mr-2 text-red-600">➜</span> <strong>Ibiza Hack:</strong> Leather cuffs/belts from Dalt Vila markets.</li>
-                </ul>
-            </div>
+          <article class="card">
+            <span class="pill">Spartan / Greek Hero</span>
+            <h3>Spartan Warrior</h3>
+            <p>Short tunic, cloak, leather look, and a shield. Easy to scale up.</p>
+            <ul class="list">
+              <li>DIY: brown or maroon tunic, red cape, leather wristbands.</li>
+              <li>Props: cardboard or foam shield, spear.</li>
+              <li>Upgrade: foam muscle armor, bronze paint.</li>
+            </ul>
+            <span class="tag">DIY + Retail</span>
+            <ul class="list">
+              <li>Ibiza craft stores: EVA foam, paint, straps.</li>
+              <li>Disfrazzes: warrior costume base, 24/48h shipping.</li>
+            </ul>
+          </article>
 
-            <!-- Archetype 4: Socrates -->
-            <div class="bg-white rounded-xl shadow-md p-6 border-t-4 border-gray-500 card-hover">
-                <div class="flex items-center justify-between mb-4">
-                    <h3 class="text-xl font-bold text-aegean-900">4. Socrates (Philosopher)</h3>
-                    <span class="text-3xl">📜</span>
-                </div>
-                <p class="text-sm text-gray-600 mb-4">
-                    Zero budget, maximum comfort.
-                </p>
-                <ul class="text-sm space-y-2">
-                    <li class="flex items-start"><span class="mr-2 text-gray-500">➜</span> <strong>Base:</strong> Classic white bedsheet toga.</li>
-                    <li class="flex items-start"><span class="mr-2 text-gray-500">➜</span> <strong>Prop:</strong> A rolled up paper "scroll" and a fake beard (cotton wool or costume shop).</li>
-                    <li class="flex items-start"><span class="mr-2 text-gray-500">➜</span> <strong>Action:</strong> Walk around asking people confusing questions.</li>
-                </ul>
-            </div>
+          <article class="card">
+            <span class="pill">Dionysus</span>
+            <h3>Dionysus, God of Wine</h3>
+            <p>Party god by default. Best ROI for Ibiza nightlife.</p>
+            <ul class="list">
+              <li>DIY: wine-colored toga, ivy crown, grape cluster.</li>
+              <li>Props: gold goblet, faux fur or gold chains.</li>
+              <li>Color cues: purple, burgundy, and gold.</li>
+            </ul>
+            <span class="tag">Local Shops</span>
+            <ul class="list">
+              <li>Ibiza local: Toy Planet Ibiza, Don Dino.</li>
+              <li>Craft stores: vines, grapes, garlands.</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <span class="pill">Myth Creature</span>
+            <h3>Satyr / Pan</h3>
+            <p>Half-goat energy with horns and a flute. DIY-friendly.</p>
+            <ul class="list">
+              <li>DIY: brown leggings, faux fur, horn headpiece.</li>
+              <li>Props: simple flute, rustic belt.</li>
+            </ul>
+            <span class="tag">Accessory Hunt</span>
+            <ul class="list">
+              <li>EIVITOYS and Tur Toy: horns, wigs, ears.</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <span class="pill">Greek Philosopher</span>
+            <h3>Philosopher with Scroll</h3>
+            <p>The low-effort, high-comfort option with a comedic twist.</p>
+            <ul class="list">
+              <li>DIY: toga + scroll + fake beard.</li>
+              <li>Prop upgrade: chalkboard sign with a quote.</li>
+            </ul>
+            <span class="tag">48h Online Option</span>
+            <ul class="list">
+              <li>Funidelia: basic Greek tunic delivery to Balearics in 48h.</li>
+            </ul>
+          </article>
         </div>
+      </section>
 
-        <!-- Section 4: Attribute Radar Analysis -->
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <!-- Radar Chart -->
-            <div class="bg-white rounded-xl shadow-md p-6">
-                <h3 class="text-xl font-bold mb-2 text-aegean-700">Comfort & Suitability Analysis</h3>
-                <p class="text-sm text-gray-600 mb-6">
-                    Evaluating costumes based on "Heat Comfort" (essential for Ibiza), "Availability" of parts, and "Mobility" (dancing).
-                </p>
-                <div class="chart-container">
-                    <canvas id="attributeChart"></canvas>
-                </div>
-            </div>
-
-            <!-- Sourcing Donut Chart -->
-            <div class="bg-white rounded-xl shadow-md p-6">
-                <h3 class="text-xl font-bold mb-2 text-aegean-700">Ibiza Sourcing Logistics</h3>
-                <p class="text-sm text-gray-600 mb-6">
-                    Where to find your gear on the island before next week. "Bazaars" (Chinese variety stores) are your best friend for raw materials.
-                </p>
-                <div class="chart-container">
-                    <canvas id="sourcingChart"></canvas>
-                </div>
-            </div>
+      <section class="section">
+        <div class="section-title">
+          <h2>Over-the-Top Builds</h2>
+          <span class="line"></span>
         </div>
+        <div class="grid">
+          <article class="card">
+            <span class="pill">Armor Tier</span>
+            <h3>Greek God with Armor</h3>
+            <ul class="list">
+              <li>Metallic chest plate, large cape, cuffs, and a dramatic prop.</li>
+              <li>Body paint on arms and legs for bronze or gold effect.</li>
+              <li>Disfrazzes and Funidelia carry armor pieces and props.</li>
+            </ul>
+          </article>
 
-        <!-- Section 5: The Execution Timeline -->
-        <section class="bg-aegean-900 text-white rounded-xl shadow-md p-8">
-            <h2 class="text-2xl font-bold mb-6 text-gold-500">7-Day Deployment Timeline</h2>
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
-                
-                <!-- Step 1 -->
-                <div class="bg-aegean-800 p-4 rounded-lg border border-aegean-700">
-                    <div class="text-gold-500 font-black text-xl mb-2">T-Minus 7 Days</div>
-                    <h4 class="font-bold mb-2">Concept & Order</h4>
-                    <p class="text-sm text-gray-300">
-                        Select one archetype above. Order specific props (Helmets/Swords) via Amazon ES Prime if local availability is doubtful.
-                    </p>
-                </div>
+          <article class="card">
+            <span class="pill">300 Mode</span>
+            <h3>Spartan 300 Soldier</h3>
+            <ul class="list">
+              <li>Muscle chest plate, red cape, Corinthian helmet, round shield.</li>
+              <li>Amazon.es and Disfrazzes ship quickly to Balearics.</li>
+            </ul>
+          </article>
 
-                <!-- Step 2 -->
-                <div class="bg-aegean-800 p-4 rounded-lg border border-aegean-700">
-                    <div class="text-gold-500 font-black text-xl mb-2">T-Minus 4 Days</div>
-                    <h4 class="font-bold mb-2">The Forage</h4>
-                    <p class="text-sm text-gray-300">
-                        Visit a "Chinese Bazaar" (e.g., near Ibiza Town or San Antonio). Buy: Safety pins, gold spray paint, plastic leaves, rope.
-                    </p>
-                </div>
+          <article class="card">
+            <span class="pill">Ibiza Twist</span>
+            <h3>Greek King of Parties</h3>
+            <ul class="list">
+              <li>Toga plus sunglasses, gold chains, and LED laurel.</li>
+              <li>Pair with a neon prop or gold goblet.</li>
+            </ul>
+          </article>
 
-                <!-- Step 3 -->
-                <div class="bg-aegean-800 p-4 rounded-lg border border-aegean-700">
-                    <div class="text-gold-500 font-black text-xl mb-2">T-Minus 2 Days</div>
-                    <h4 class="font-bold mb-2">Construction</h4>
-                    <p class="text-sm text-gray-300">
-                        Soak fabric in tea if you want an "antique" look. Spray paint any plastic props gold. Test the toga fold integrity.
-                    </p>
-                </div>
+          <article class="card">
+            <span class="pill">Myth Beast</span>
+            <h3>Cyclops</h3>
+            <ul class="list">
+              <li>Single large eye prop (paper plate + foam), tunic, club.</li>
+              <li>Foam and craft supplies from local hobby shops.</li>
+            </ul>
+          </article>
 
-                <!-- Step 4 -->
-                <div class="bg-aegean-800 p-4 rounded-lg border border-aegean-700">
-                    <div class="text-gold-500 font-black text-xl mb-2">Zero Hour</div>
-                    <h4 class="font-bold mb-2">Assembly</h4>
-                    <p class="text-sm text-gray-300">
-                        Wear shorts under your toga (trust us). Apply generous gold glitter or face paint. Go forth and party like it's 300 BC.
-                    </p>
-                </div>
+          <article class="card">
+            <span class="pill">Group Strategy</span>
+            <h3>Greek Gods Crew</h3>
+            <ul class="list">
+              <li>Split deities: Zeus, Poseidon, Hermes, Hades, Aphrodite.</li>
+              <li>Buy bases online and add DIY wings or crowns.</li>
+            </ul>
+          </article>
+        </div>
+      </section>
 
+      <section class="section">
+        <div class="section-title">
+          <h2>Ibiza Sourcing Map</h2>
+          <span class="line"></span>
+        </div>
+        <div class="split">
+          <div class="panel">
+            <h4>Local Shops (Last-minute wins)</h4>
+            <p>EIVITOYS (Ibiza Town): costumes, makeup, accessories.</p>
+            <p>Tur Toy Stores: adult costumes, accessories, quick pickup.</p>
+            <p>Toy Planet Ibiza and Don Dino: costume sections, props.</p>
+            <p>Craft and hardware shops: foam, rope, spray paint.</p>
+          </div>
+          <div class="panel">
+            <h4>Online Fast Shipping (24-48h)</h4>
+            <p>Disfrazzes: Greek gods, armor, props. Free shipping above EUR 60.</p>
+            <p>Funidelia: Greek god costumes, 48h to Balearics. EUR 6.99 fee.</p>
+            <p>Disfraces Antifaz: Greek costumes, 24-48h. Free above EUR 59.99.</p>
+            <p>Comarfi: 24-48h to Balearics, broad costume range.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-title">
+          <h2>Delivery Tactics</h2>
+          <span class="line"></span>
+        </div>
+        <div class="timeline">
+          <div class="step">
+            <strong>Day 7-6</strong>
+            <span>Pick the archetype. Order key props online before mid-afternoon.</span>
+          </div>
+          <div class="step">
+            <strong>Day 5-4</strong>
+            <span>Visit Ibiza shops for belts, garlands, and backups.</span>
+          </div>
+          <div class="step">
+            <strong>Day 3-2</strong>
+            <span>Assemble the base fit, test the toga fold, paint props.</span>
+          </div>
+          <div class="step">
+            <strong>Day 1</strong>
+            <span>Final styling: gold trim, face accents, and accessories.</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-title">
+          <h2>Quick Checklist</h2>
+          <span class="line"></span>
+        </div>
+        <div class="checklist">
+          <div class="checklist-item">
+            <div class="check">✓</div>
+            <div>
+              <strong>Base Fit</strong>
+              <p>Sheet or tunic, belt, sandals, breathable layers.</p>
             </div>
-        </section>
+          </div>
+          <div class="checklist-item">
+            <div class="check">✓</div>
+            <div>
+              <strong>Signature Prop</strong>
+              <p>Trident, lightning bolt, goblet, or scroll.</p>
+            </div>
+          </div>
+          <div class="checklist-item">
+            <div class="check">✓</div>
+            <div>
+              <strong>Headpiece</strong>
+              <p>Laurel crown, ivy garland, helmet, or horns.</p>
+            </div>
+          </div>
+          <div class="checklist-item">
+            <div class="check">✓</div>
+            <div>
+              <strong>Fast Sourcing</strong>
+              <p>Local shop backups + 24-48h online order placed.</p>
+            </div>
+          </div>
+          <div class="checklist-item">
+            <div class="check">✓</div>
+            <div>
+              <strong>Final Styling</strong>
+              <p>Gold trim, paint, jewelry, and heat-tested mobility.</p>
+            </div>
+          </div>
+        </div>
+      </section>
 
-        <footer class="text-center text-gray-500 text-sm mt-8 pb-8">
-            <p>Generated by Canvas Infographics &copy; 2026. No mythical creatures were harmed in the making of this strategy.</p>
-        </footer>
+      <section class="section">
+        <div class="section-title">
+          <h2>Lookbook Gallery</h2>
+          <span class="line"></span>
+        </div>
+        <div class="gallery">
+          <div class="gallery-card">
+            <div class="gallery-swatch" style="background: linear-gradient(135deg, #0b1f2e, #00a7b7);"></div>
+            <div class="gallery-body">
+              <h3>Aegean Commander</h3>
+              <p>Teal tunic, trident, shell accents. Poseidon energy.</p>
+            </div>
+          </div>
+          <div class="gallery-card">
+            <div class="gallery-swatch" style="background: linear-gradient(135deg, #4b1f1f, #f4b43c);"></div>
+            <div class="gallery-body">
+              <h3>Spartan Heatwave</h3>
+              <p>Red cape, leather cuffs, bronze armor highlights.</p>
+            </div>
+          </div>
+          <div class="gallery-card">
+            <div class="gallery-swatch" style="background: linear-gradient(135deg, #3b1c4a, #ff6b4a);"></div>
+            <div class="gallery-body">
+              <h3>Dionysus Night</h3>
+              <p>Wine robe, ivy crown, gold chain, goblet prop.</p>
+            </div>
+          </div>
+          <div class="gallery-card">
+            <div class="gallery-swatch" style="background: linear-gradient(135deg, #2e3a44, #f6f2ea);"></div>
+            <div class="gallery-body">
+              <h3>Philosopher Minimal</h3>
+              <p>Stone-white toga, parchment scroll, quiet confidence.</p>
+            </div>
+          </div>
+        </div>
+      </section>
 
+      <section class="section">
+        <div class="section-title">
+          <h2>Sources (PDF-derived)</h2>
+          <span class="line"></span>
+        </div>
+        <div class="source-list">
+          <a href="https://welcometoibiza.com/agenda-ibiza/magazine/fiestas-de-disfraces-en-ibiza/">
+            Costume parties in Ibiza - local costume shop references
+          </a>
+          <a href="https://www.funidelia.es/faq/7-costes-de-envio">
+            Funidelia shipping policy (Balearics 48h)
+          </a>
+          <a href="https://www.disfrazzes.com/tematica/disfraces-griegos/">
+            Disfrazzes Greek costumes and accessories
+          </a>
+          <a href="https://www.disfracesantifaz.com/1868-tienda-de-disfraces-en-ibiza">
+            Disfraces Antifaz (Ibiza costume shop)
+          </a>
+          <a href="https://www.comarfi.com/es/tienda-de-disfraces-en-baleares-15.html">
+            Comarfi costumes for Balearics
+          </a>
+        </div>
+      </section>
+
+      <div class="footer">
+        Operation AlisonIsGreek - strategy meets sourcing. Built for Ibiza, built for speed.
+      </div>
     </main>
-
-    <!-- CHART IMPLEMENTATION -->
-    <script>
-        // --- Shared Chart Config ---
-        Chart.defaults.color = '#0C4A6E';
-        Chart.defaults.font.family = 'Roboto';
-
-        const tooltipPlugin = {
-            tooltip: {
-                callbacks: {
-                    title: function(tooltipItems) {
-                        const item = tooltipItems[0];
-                        let label = item.chart.data.labels[item.dataIndex];
-                        if (Array.isArray(label)) return label.join(' ');
-                        return label;
-                    }
-                },
-                backgroundColor: 'rgba(12, 74, 110, 0.9)',
-                titleColor: '#EAB308',
-                bodyColor: '#fff',
-                padding: 12,
-                cornerRadius: 8
-            }
-        };
-
-        // --- Chart 1: Effort vs Impact (Bar Chart) ---
-        const ctxImpact = document.getElementById('impactChart').getContext('2d');
-        new Chart(ctxImpact, {
-            type: 'bar',
-            data: {
-                labels: [['Dionysus', '(Party God)'], ['Ares', '(Spartan)'], ['Poseidon', '(Sea King)'], ['Socrates', '(Philosopher)']],
-                datasets: [{
-                    label: 'Wow Factor (Impact)',
-                    data: [8, 9, 7, 5],
-                    backgroundColor: '#0EA5E9',
-                    borderRadius: 4
-                },
-                {
-                    label: 'Effort Required',
-                    data: [3, 8, 6, 2],
-                    backgroundColor: '#EAB308',
-                    borderRadius: 4
-                }]
-            },
-            options: {
-                responsive: true,
-                maintainAspectRatio: false,
-                plugins: {
-                    ...tooltipPlugin,
-                    legend: { position: 'bottom' }
-                },
-                scales: {
-                    y: {
-                        beginAtZero: true,
-                        max: 10,
-                        title: { display: true, text: 'Score (1-10)' }
-                    }
-                }
-            }
-        });
-
-        // --- Chart 2: Attribute Analysis (Radar Chart) ---
-        const ctxAttribute = document.getElementById('attributeChart').getContext('2d');
-        new Chart(ctxAttribute, {
-            type: 'radar',
-            data: {
-                labels: ['Heat Comfort', 'Low Cost', 'Local Availability', 'Mobility (Dancing)', 'Uniqueness'],
-                datasets: [{
-                    label: 'Dionysus',
-                    data: [9, 8, 9, 8, 7],
-                    borderColor: '#0EA5E9',
-                    backgroundColor: 'rgba(14, 165, 233, 0.2)',
-                    pointBackgroundColor: '#0EA5E9'
-                }, {
-                    label: 'Ares (Spartan)',
-                    data: [5, 4, 6, 6, 9],
-                    borderColor: '#EAB308',
-                    backgroundColor: 'rgba(234, 179, 8, 0.2)',
-                    pointBackgroundColor: '#EAB308'
-                }]
-            },
-            options: {
-                responsive: true,
-                maintainAspectRatio: false,
-                plugins: {
-                    ...tooltipPlugin,
-                    legend: { position: 'bottom' }
-                },
-                scales: {
-                    r: {
-                        angleLines: { color: '#e5e7eb' },
-                        grid: { color: '#e5e7eb' },
-                        suggestedMin: 0,
-                        suggestedMax: 10,
-                        ticks: { display: false } // Hide numbers on axis for cleaner look
-                    }
-                }
-            }
-        });
-
-        // --- Chart 3: Sourcing Logistics (Doughnut Chart) ---
-        const ctxSourcing = document.getElementById('sourcingChart').getContext('2d');
-        new Chart(ctxSourcing, {
-            type: 'doughnut',
-            data: {
-                // Split long label "Hippie Markets (Las Dalias)"
-                labels: [
-                    ['Chinese Bazaars', '(General Supplies)'], 
-                    ['Fashion Shops', '(Leather/Linen)'], 
-                    ['Hardware Stores', '(Props/Paint)'], 
-                    ['Online/Amazon', '(Specifics)']
-                ],
-                datasets: [{
-                    data: [45, 25, 15, 15],
-                    backgroundColor: [
-                        '#0EA5E9', // Blue
-                        '#EAB308', // Gold
-                        '#0C4A6E', // Dark Blue
-                        '#94A3B8'  // Grey
-                    ],
-                    borderWidth: 0
-                }]
-            },
-            options: {
-                responsive: true,
-                maintainAspectRatio: false,
-                plugins: {
-                    ...tooltipPlugin,
-                    legend: { position: 'right' }
-                },
-                cutout: '60%'
-            }
-        });
-    </script>
-</body>
+  </body>
 </html>
