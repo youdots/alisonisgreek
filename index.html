@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operation Odyssey: Ibiza Costume Strategy</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'aegean-900': '#0C4A6E', // Deep Blue
+                        'aegean-700': '#0369A1',
+                        'aegean-500': '#0EA5E9', // Vibrant Blue
+                        'gold-500': '#EAB308',   // Gold Accent
+                        'gold-100': '#FEF9C3',
+                        'stone-50': '#FAFAF9',
+                    },
+                    fontFamily: {
+                        sans: ['Roboto', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- 
+        PALETTE: Electric Aegean & Gold
+        Primary: #0EA5E9 (Vibrant Blue)
+        Secondary: #EAB308 (Gold)
+        Background: #FAFAF9 (Stone White)
+        Text: #0C4A6E (Deep Navy)
+        
+        Selected based on the "Vibrant/Energetic" requirement and the Greek Theme.
+    -->
+
+    <!-- 
+        NARRATIVE PLAN:
+        1. Intro: Setting the scene (Ibiza context, 42yo male target).
+        2. The Archetypes: 4 Distinct personas with "Buy/Make" instructions.
+        3. Strategic Analysis (Charts): Comparing effort, impact, and comfort.
+        4. Sourcing Logistics: Where to buy in Ibiza vs Online.
+        5. Timeline: 7-Day execution plan.
+    -->
+
+    <style>
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 350px;
+            max-height: 400px;
+        }
+        @media (max-width: 640px) {
+            .chart-container {
+                height: 300px;
+            }
+        }
+        .card-hover:hover {
+            transform: translateY(-5px);
+            transition: transform 0.3s ease;
+        }
+    </style>
+</head>
+<body class="bg-stone-50 text-aegean-900 font-sans leading-relaxed">
+
+    <!-- Header / Hook -->
+    <header class="bg-aegean-900 text-white py-12 px-4 shadow-lg">
+        <div class="max-w-6xl mx-auto text-center">
+            <h1 class="text-4xl md:text-6xl font-black mb-4 tracking-tight uppercase text-gold-500">Operation: Odyssey</h1>
+            <p class="text-xl md:text-2xl font-light text-aegean-200">The 42-Year-Old's Strategic Guide to Greek Mythology in Ibiza</p>
+            <p class="mt-4 text-sm md:text-base opacity-80 max-w-2xl mx-auto">
+                Target: Greek Costume Party. Timeline: &lt; 7 Days. Location: Ibiza.
+                <br>Mission: High Impact, Low Stress, Maximum Breathability.
+            </p>
+        </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-4 py-8 grid grid-cols-1 gap-12">
+
+        <!-- Section 1: Introduction -->
+        <section class="bg-white rounded-xl shadow-md p-6 md:p-8 border-l-8 border-gold-500">
+            <h2 class="text-2xl font-bold mb-4 text-aegean-700">Mission Briefing</h2>
+            <p class="text-lg text-gray-700 mb-4">
+                Creating a Greek costume on the White Isle requires balancing historical aesthetics with the reality of Balearic heat.
+                We have identified four viable "Archetypes" suited for a 42-year-old male that range from "Royal & Relaxed" to "Theatrical Warrior."
+                The data below analyzes the trade-offs between "Wow Factor" and "Effort Required" to help you choose your path.
+            </p>
+        </section>
+
+        <!-- Section 2: Comparative Analysis (Bar Chart) -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="bg-white rounded-xl shadow-md p-6 flex flex-col justify-center">
+                <h3 class="text-xl font-bold mb-2 text-aegean-700">Effort vs. Impact Matrix</h3>
+                <p class="text-sm text-gray-600 mb-6">
+                    A comparative analysis of costume archetypes. "Dionysus" offers the highest return on investment (Low Effort, High Fun), while "Ares" commands the room but requires sourcing leather.
+                </p>
+                <div class="chart-container">
+                    <canvas id="impactChart"></canvas>
+                </div>
+            </div>
+
+            <!-- Archetype 1: Dionysus -->
+            <div class="bg-gold-100 rounded-xl shadow-md p-6 border border-gold-500 card-hover">
+                <div class="flex items-center justify-between mb-4">
+                    <h3 class="text-2xl font-bold text-aegean-900">1. Dionysus (The Party God)</h3>
+                    <span class="text-4xl">🍇</span>
+                </div>
+                <p class="mb-4 font-bold text-aegean-700">The "I'm here to enjoy myself" option.</p>
+                <p class="text-sm mb-4">God of wine, festivity, and madness. Perfect for Ibiza nightlife.</p>
+                <div class="bg-white p-4 rounded-lg shadow-inner">
+                    <h4 class="font-bold text-sm uppercase tracking-wide text-gray-500 mb-2">Sourcing List (Ibiza):</h4>
+                    <ul class="list-disc list-inside space-y-1 text-sm">
+                        <li><strong>Base:</strong> White linen shirt (open) or bedsheet toga.</li>
+                        <li><strong>Head:</strong> Ivy/Vine garland (Florist or 'Chinese Bazaar' store).</li>
+                        <li><strong>Prop:</strong> Gold Wine Goblet (Home decor shop) & Bunch of plastic grapes.</li>
+                        <li><strong>Vibe:</strong> Leopard print scarf/fabric over shoulder.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section 3: The Archetypes Continued -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            
+            <!-- Archetype 2: Poseidon -->
+            <div class="bg-white rounded-xl shadow-md p-6 border-t-4 border-aegean-500 card-hover">
+                <div class="flex items-center justify-between mb-4">
+                    <h3 class="text-xl font-bold text-aegean-900">2. Poseidon (Sea King)</h3>
+                    <span class="text-3xl">🔱</span>
+                </div>
+                <p class="text-sm text-gray-600 mb-4">
+                    Uses items easily found in beach shops.
+                </p>
+                <ul class="text-sm space-y-2">
+                    <li class="flex items-start"><span class="mr-2 text-aegean-500">➜</span> <strong>Weapon:</strong> Plastic Trident (Toy stores/Beach shops).</li>
+                    <li class="flex items-start"><span class="mr-2 text-aegean-500">➜</span> <strong>Wear:</strong> Turquoise/Blue linens. A fishing net (decor shop) draped as a cape.</li>
+                    <li class="flex items-start"><span class="mr-2 text-aegean-500">➜</span> <strong>Detail:</strong> Glue shells to a headband.</li>
+                </ul>
+            </div>
+
+            <!-- Archetype 3: Ares -->
+            <div class="bg-white rounded-xl shadow-md p-6 border-t-4 border-red-600 card-hover">
+                <div class="flex items-center justify-between mb-4">
+                    <h3 class="text-xl font-bold text-aegean-900">3. Ares (The Spartan)</h3>
+                    <span class="text-3xl">⚔️</span>
+                </div>
+                <p class="text-sm text-gray-600 mb-4">
+                    High masculinity, requires leather accessories.
+                </p>
+                <ul class="text-sm space-y-2">
+                    <li class="flex items-start"><span class="mr-2 text-red-600">➜</span> <strong>Base:</strong> Brown leather sandals & shorts.</li>
+                    <li class="flex items-start"><span class="mr-2 text-red-600">➜</span> <strong>Key Item:</strong> Red fabric (sold by the meter) safety-pinned as a cape.</li>
+                    <li class="flex items-start"><span class="mr-2 text-red-600">➜</span> <strong>Ibiza Hack:</strong> Leather cuffs/belts from Dalt Vila markets.</li>
+                </ul>
+            </div>
+
+            <!-- Archetype 4: Socrates -->
+            <div class="bg-white rounded-xl shadow-md p-6 border-t-4 border-gray-500 card-hover">
+                <div class="flex items-center justify-between mb-4">
+                    <h3 class="text-xl font-bold text-aegean-900">4. Socrates (Philosopher)</h3>
+                    <span class="text-3xl">📜</span>
+                </div>
+                <p class="text-sm text-gray-600 mb-4">
+                    Zero budget, maximum comfort.
+                </p>
+                <ul class="text-sm space-y-2">
+                    <li class="flex items-start"><span class="mr-2 text-gray-500">➜</span> <strong>Base:</strong> Classic white bedsheet toga.</li>
+                    <li class="flex items-start"><span class="mr-2 text-gray-500">➜</span> <strong>Prop:</strong> A rolled up paper "scroll" and a fake beard (cotton wool or costume shop).</li>
+                    <li class="flex items-start"><span class="mr-2 text-gray-500">➜</span> <strong>Action:</strong> Walk around asking people confusing questions.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Section 4: Attribute Radar Analysis -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <!-- Radar Chart -->
+            <div class="bg-white rounded-xl shadow-md p-6">
+                <h3 class="text-xl font-bold mb-2 text-aegean-700">Comfort & Suitability Analysis</h3>
+                <p class="text-sm text-gray-600 mb-6">
+                    Evaluating costumes based on "Heat Comfort" (essential for Ibiza), "Availability" of parts, and "Mobility" (dancing).
+                </p>
+                <div class="chart-container">
+                    <canvas id="attributeChart"></canvas>
+                </div>
+            </div>
+
+            <!-- Sourcing Donut Chart -->
+            <div class="bg-white rounded-xl shadow-md p-6">
+                <h3 class="text-xl font-bold mb-2 text-aegean-700">Ibiza Sourcing Logistics</h3>
+                <p class="text-sm text-gray-600 mb-6">
+                    Where to find your gear on the island before next week. "Bazaars" (Chinese variety stores) are your best friend for raw materials.
+                </p>
+                <div class="chart-container">
+                    <canvas id="sourcingChart"></canvas>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section 5: The Execution Timeline -->
+        <section class="bg-aegean-900 text-white rounded-xl shadow-md p-8">
+            <h2 class="text-2xl font-bold mb-6 text-gold-500">7-Day Deployment Timeline</h2>
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+                
+                <!-- Step 1 -->
+                <div class="bg-aegean-800 p-4 rounded-lg border border-aegean-700">
+                    <div class="text-gold-500 font-black text-xl mb-2">T-Minus 7 Days</div>
+                    <h4 class="font-bold mb-2">Concept & Order</h4>
+                    <p class="text-sm text-gray-300">
+                        Select one archetype above. Order specific props (Helmets/Swords) via Amazon ES Prime if local availability is doubtful.
+                    </p>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="bg-aegean-800 p-4 rounded-lg border border-aegean-700">
+                    <div class="text-gold-500 font-black text-xl mb-2">T-Minus 4 Days</div>
+                    <h4 class="font-bold mb-2">The Forage</h4>
+                    <p class="text-sm text-gray-300">
+                        Visit a "Chinese Bazaar" (e.g., near Ibiza Town or San Antonio). Buy: Safety pins, gold spray paint, plastic leaves, rope.
+                    </p>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="bg-aegean-800 p-4 rounded-lg border border-aegean-700">
+                    <div class="text-gold-500 font-black text-xl mb-2">T-Minus 2 Days</div>
+                    <h4 class="font-bold mb-2">Construction</h4>
+                    <p class="text-sm text-gray-300">
+                        Soak fabric in tea if you want an "antique" look. Spray paint any plastic props gold. Test the toga fold integrity.
+                    </p>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="bg-aegean-800 p-4 rounded-lg border border-aegean-700">
+                    <div class="text-gold-500 font-black text-xl mb-2">Zero Hour</div>
+                    <h4 class="font-bold mb-2">Assembly</h4>
+                    <p class="text-sm text-gray-300">
+                        Wear shorts under your toga (trust us). Apply generous gold glitter or face paint. Go forth and party like it's 300 BC.
+                    </p>
+                </div>
+
+            </div>
+        </section>
+
+        <footer class="text-center text-gray-500 text-sm mt-8 pb-8">
+            <p>Generated by Canvas Infographics &copy; 2026. No mythical creatures were harmed in the making of this strategy.</p>
+        </footer>
+
+    </main>
+
+    <!-- CHART IMPLEMENTATION -->
+    <script>
+        // --- Shared Chart Config ---
+        Chart.defaults.color = '#0C4A6E';
+        Chart.defaults.font.family = 'Roboto';
+
+        const tooltipPlugin = {
+            tooltip: {
+                callbacks: {
+                    title: function(tooltipItems) {
+                        const item = tooltipItems[0];
+                        let label = item.chart.data.labels[item.dataIndex];
+                        if (Array.isArray(label)) return label.join(' ');
+                        return label;
+                    }
+                },
+                backgroundColor: 'rgba(12, 74, 110, 0.9)',
+                titleColor: '#EAB308',
+                bodyColor: '#fff',
+                padding: 12,
+                cornerRadius: 8
+            }
+        };
+
+        // --- Chart 1: Effort vs Impact (Bar Chart) ---
+        const ctxImpact = document.getElementById('impactChart').getContext('2d');
+        new Chart(ctxImpact, {
+            type: 'bar',
+            data: {
+                labels: [['Dionysus', '(Party God)'], ['Ares', '(Spartan)'], ['Poseidon', '(Sea King)'], ['Socrates', '(Philosopher)']],
+                datasets: [{
+                    label: 'Wow Factor (Impact)',
+                    data: [8, 9, 7, 5],
+                    backgroundColor: '#0EA5E9',
+                    borderRadius: 4
+                },
+                {
+                    label: 'Effort Required',
+                    data: [3, 8, 6, 2],
+                    backgroundColor: '#EAB308',
+                    borderRadius: 4
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    ...tooltipPlugin,
+                    legend: { position: 'bottom' }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        max: 10,
+                        title: { display: true, text: 'Score (1-10)' }
+                    }
+                }
+            }
+        });
+
+        // --- Chart 2: Attribute Analysis (Radar Chart) ---
+        const ctxAttribute = document.getElementById('attributeChart').getContext('2d');
+        new Chart(ctxAttribute, {
+            type: 'radar',
+            data: {
+                labels: ['Heat Comfort', 'Low Cost', 'Local Availability', 'Mobility (Dancing)', 'Uniqueness'],
+                datasets: [{
+                    label: 'Dionysus',
+                    data: [9, 8, 9, 8, 7],
+                    borderColor: '#0EA5E9',
+                    backgroundColor: 'rgba(14, 165, 233, 0.2)',
+                    pointBackgroundColor: '#0EA5E9'
+                }, {
+                    label: 'Ares (Spartan)',
+                    data: [5, 4, 6, 6, 9],
+                    borderColor: '#EAB308',
+                    backgroundColor: 'rgba(234, 179, 8, 0.2)',
+                    pointBackgroundColor: '#EAB308'
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    ...tooltipPlugin,
+                    legend: { position: 'bottom' }
+                },
+                scales: {
+                    r: {
+                        angleLines: { color: '#e5e7eb' },
+                        grid: { color: '#e5e7eb' },
+                        suggestedMin: 0,
+                        suggestedMax: 10,
+                        ticks: { display: false } // Hide numbers on axis for cleaner look
+                    }
+                }
+            }
+        });
+
+        // --- Chart 3: Sourcing Logistics (Doughnut Chart) ---
+        const ctxSourcing = document.getElementById('sourcingChart').getContext('2d');
+        new Chart(ctxSourcing, {
+            type: 'doughnut',
+            data: {
+                // Split long label "Hippie Markets (Las Dalias)"
+                labels: [
+                    ['Chinese Bazaars', '(General Supplies)'], 
+                    ['Fashion Shops', '(Leather/Linen)'], 
+                    ['Hardware Stores', '(Props/Paint)'], 
+                    ['Online/Amazon', '(Specifics)']
+                ],
+                datasets: [{
+                    data: [45, 25, 15, 15],
+                    backgroundColor: [
+                        '#0EA5E9', // Blue
+                        '#EAB308', // Gold
+                        '#0C4A6E', // Dark Blue
+                        '#94A3B8'  // Grey
+                    ],
+                    borderWidth: 0
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    ...tooltipPlugin,
+                    legend: { position: 'right' }
+                },
+                cutout: '60%'
+            }
+        });
+    </script>
+</body>
+</html>
